@@ -136,8 +136,10 @@ hero.on('message',async message => {
               m = await m.delete().catch();
               message.channel.send('- **تم نشر الكود**');
               let c = message.guild.channels.get('492964899467821056');
-              c.send(`@everyone, جميع الحقوق محفوظة لدى سيرفر كريشنز\n\`\`\`js\n${code}\`\`\`\n**» وصف الكود :**\n${desc.replace('**', '')}\n\n**» تم النشر بواسطة :** ${message.author}\n**» صاحب الكود :** ${creator}`)
-            });
+              let m = await c.send(`@everyone, جميع الحقوق محفوظة لدى سيرفر كريشنز\n\`\`\`js\n${code}\`\`\`\n**» وصف الكود :**\n${desc.replace('**', '')}\n\n**» تم النشر بواسطة :** ${message.author}\n**» صاحب الكود :** ${creator}`)
+              await m.react(message.guild.emojis.find(r => r.name === 'greenTick'));
+	      await m.react(message.guild.emojis.find(r => r.name === 'redTick'));
+	      });
             falseM.on('collect', async (r) => {
               m = await m.delete().catch();
               message.channel.send('- **تم الغاء الارسال**');
@@ -178,8 +180,10 @@ hero.on('message',async message => {
               m = await m.delete().catch();
               message.channel.send('- **تم نشر الكود**');
               let c = message.guild.channels.get('492965081630375939');
-              c.send(`@everyone, جميع الحقوق محفوظة لدى سيرفر كريشنز\n\`\`\`html\n${code}\`\`\`\n**» وصف الكود :**\n${desc.replace('**', '')}\n\n**» تم النشر بواسطة :** ${message.author}\n**» صاحب الكود :** ${creator}`)
-            });
+              let m = await c.send(`@everyone, جميع الحقوق محفوظة لدى سيرفر كريشنز\n\`\`\`html\n${code}\`\`\`\n**» وصف الكود :**\n${desc.replace('**', '')}\n\n**» تم النشر بواسطة :** ${message.author}\n**» صاحب الكود :** ${creator}`)
+              await m.react(message.guild.emojis.find(r => r.name === 'greenTick'));
+	      await m.react(message.guild.emojis.find(r => r.name === 'redTick'));
+	      });
             falseM.on('collect', async (r) => {
               m = await m.delete().catch();
               message.channel.send('- **تم الغاء الارسال**');
@@ -220,8 +224,10 @@ hero.on('message',async message => {
               m = await m.delete().catch();
               message.channel.send('- **تم نشر الكود**');
               let c = message.guild.channels.get('492964975971926030');
-              c.send(`@everyone, جميع الحقوق محفوظة لدى سيرفر كريشنز\n\`\`\`python\n${code}\`\`\`\n**» وصف الكود :**\n${desc.replace('**', '')}\n\n**» تم النشر بواسطة :** ${message.author}\n**» صاحب الكود :** ${creator}`)
-            });
+              let m = await c.send(`@everyone, جميع الحقوق محفوظة لدى سيرفر كريشنز\n\`\`\`python\n${code}\`\`\`\n**» وصف الكود :**\n${desc.replace('**', '')}\n\n**» تم النشر بواسطة :** ${message.author}\n**» صاحب الكود :** ${creator}`)
+              await m.react(message.guild.emojis.find(r => r.name === 'greenTick'));
+	      await m.react(message.guild.emojis.find(r => r.name === 'redTick'));
+	      });
             falseM.on('collect', async (r) => {
               m = await m.delete().catch();
               message.channel.send('- **تم الغاء الارسال**');
@@ -262,8 +268,10 @@ hero.on('message',async message => {
               m = await m.delete().catch();
               message.channel.send('- **تم نشر الكود**');
               let c = message.guild.channels.get('492965132687638538');
-              c.send(`@everyone, جميع الحقوق محفوظة لدى سيرفر كريشنز\n\`\`\`js\n${code}\`\`\`\n**» وصف الكود :**\n${desc.replace('**', '')}\n\n**» تم النشر بواسطة :** ${message.author}\n**» صاحب الكود :** ${creator}`)
-            });
+              let m = await c.send(`@everyone, جميع الحقوق محفوظة لدى سيرفر كريشنز\n\`\`\`js\n${code}\`\`\`\n**» وصف الكود :**\n${desc.replace('**', '')}\n\n**» تم النشر بواسطة :** ${message.author}\n**» صاحب الكود :** ${creator}`)
+              await m.react(message.guild.emojis.find(r => r.name === 'greenTick'));
+	      await m.react(message.guild.emojis.find(r => r.name === 'redTick'));
+	      });
             falseM.on('collect', async (r) => {
               m = await m.delete().catch();
               message.channel.send('- **تم الغاء الارسال**');
