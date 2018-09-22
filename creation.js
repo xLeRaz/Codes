@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const prefix = "!";
+const prefix = "#";
 const hero = new Discord.Client({maxMessagesCache: 1});
 
 hero.on('ready', async () => {
