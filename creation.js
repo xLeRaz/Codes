@@ -16,6 +16,11 @@ hero.on('ready', async () => {
 	}
 });
 
+hero.on('guildMemberAdd',async m => {
+let role = m.guild.roles.find(r => r.name === '❋・Members');
+m.addRole(role);
+});
+
 hero.on('message',async message => {
 	if(message.author.bot || message.channel.type === 'dm' || message.guild.id !== '492914743053385739') return;
 	let args = message.content.split(' ');
