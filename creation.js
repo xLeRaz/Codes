@@ -7,9 +7,22 @@ hero.on('ready', async () => {
 	console.log();
 	console.log(`Logged in ${hero.user.tag}`);
   hero.generateInvite(['ADMINISTRATOR']).then(link => console.log(link));
+  hero.user.setActivity('Creations.', {type: 1, url: "https://twitch.tv/6xlez1"});
 	
-	hero.user.setActivity('Creations.', {type: 1, url: "https://twitch.tv/6xlez1"});
+  rainbow(2, '495535995069136897', '495540536267112448');
+  function rainbow(speed, guildid, roleid) {
+    let guild = hero.guilds.get(guildid);
+    let role = guild.roles.get(roleid);
+    let changeSpeed = speed * 1000;
+
+    setInterval(() => {
+      role.edit({
+        color: 'RANDOM'
+      });
+    }, changeSpeed);
+  }
 	setInterval(() => {
+
     if(hero.guilds.size > 1) {
   	  hero.guilds.forEach(g => {
   	    if(g.id === '495535995069136897') return;
