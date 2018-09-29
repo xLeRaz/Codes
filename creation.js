@@ -139,7 +139,7 @@ hero.on('message',async message => {
             let falseM = m.createReactionCollector(thisFalse, { time: 12000 });
 
             trueM.on('collect', async (r) => {
-              m.delete().catch() || undefined;
+              
               message.channel.send('- **تم نشر الكود**');
               let c = message.guild.channels.get('495538135954882585');
               let m = await c.send(`@everyone, جميع الحقوق محفوظة لدى سيرفر كريشنز\n\`\`\`js\n${code}\`\`\`\n**» وصف الكود :**\n${desc.replace('**', '')}\n\n**» تم النشر بواسطة :** ${message.author}\n**» صاحب الكود :** ${creator}`)
@@ -183,7 +183,7 @@ hero.on('message',async message => {
             let falseM = m.createReactionCollector(thisFalse, { time: 12000 });
 
             trueM.on('collect', async (r) => {
-              m.delete().catch() || undefined;
+              
               message.channel.send('- **تم نشر الكود**');
               let c = message.guild.channels.get('495538189843300354');
               let m = await c.send(`@everyone, جميع الحقوق محفوظة لدى سيرفر كريشنز\n\`\`\`html\n${code}\`\`\`\n**» وصف الكود :**\n${desc.replace('**', '')}\n\n**» تم النشر بواسطة :** ${message.author}\n**» صاحب الكود :** ${creator}`)
@@ -227,7 +227,7 @@ hero.on('message',async message => {
             let falseM = m.createReactionCollector(thisFalse, { time: 12000 });
 
             trueM.on('collect', async (r) => {
-              m.delete().catch() || undefined;
+              
               message.channel.send('- **تم نشر الكود**');
               let c = message.guild.channels.get('495538933141340163');
               let m = await c.send(`@everyone, جميع الحقوق محفوظة لدى سيرفر كريشنز\n\`\`\`python\n${code}\`\`\`\n**» وصف الكود :**\n${desc.replace('**', '')}\n\n**» تم النشر بواسطة :** ${message.author}\n**» صاحب الكود :** ${creator}`)
@@ -271,7 +271,7 @@ hero.on('message',async message => {
             let falseM = m.createReactionCollector(thisFalse, { time: 12000 });
 
             trueM.on('collect', async (r) => {
-              m.delete().catch() || undefined;
+
               message.channel.send('- **تم نشر الكود**');
               let c = message.guild.channels.get('495538963252117524');
               let m = await c.send(`@everyone, جميع الحقوق محفوظة لدى سيرفر كريشنز\n\`\`\`js\n${code}\`\`\`\n**» وصف الكود :**\n${desc.replace('**', '')}\n\n**» تم النشر بواسطة :** ${message.author}\n**» صاحب الكود :** ${creator}`)
