@@ -133,14 +133,12 @@ hero.on('message',async message => {
             m = await m.edit(`${message.author}, \`\`\`js\n${code}\`\`\`\nوصف الكود :\n${desc}\n\nصاحب الكود : ${creator}`);
             await m.react('✅');
             await m.react('❌');
-            m = message.guild.fetchMessages().then(s => s.get(m.id));
             let thisTrue = (reaction, user) => reaction.emoji.name === '✅' && user.id === message.author.id;
             let thisFalse = (reaction, user) => reaction.emoji.name === '❌' && user.id === message.author.id;
             let trueM = m.createReactionCollector(thisTrue, { time: 12000 });
             let falseM = m.createReactionCollector(thisFalse, { time: 12000 });
 
             trueM.on('collect', async (r) => {
-              m.delete().catch();
               message.channel.send('- **تم نشر الكود**');
               let c = message.guild.channels.get('495538135954882585');
               let m = await c.send(`@everyone, جميع الحقوق محفوظة لدى سيرفر كريشنز\n\`\`\`js\n${code}\`\`\`\n**» وصف الكود :**\n${desc.replace('**', '')}\n\n**» تم النشر بواسطة :** ${message.author}\n**» صاحب الكود :** ${creator}`)
@@ -148,7 +146,7 @@ hero.on('message',async message => {
 	      await m.react(message.guild.emojis.find(r => r.name === 'redTick'));
 	      });
             falseM.on('collect', async (r) => {
-              m.delete().catch();
+              
               message.channel.send('- **تم الغاء الارسال**');
             });
           });
@@ -184,7 +182,7 @@ hero.on('message',async message => {
             let falseM = m.createReactionCollector(thisFalse, { time: 12000 });
 
             trueM.on('collect', async (r) => {
-              m.delete().catch();
+              
               message.channel.send('- **تم نشر الكود**');
               let c = message.guild.channels.get('495540019818266624');
               let m = await c.send(`@everyone, جميع الحقوق محفوظة لدى سيرفر كريشنز\n\`\`\`html\n${code}\`\`\`\n**» وصف الكود :**\n${desc.replace('**', '')}\n\n**» تم النشر بواسطة :** ${message.author}\n**» صاحب الكود :** ${creator}`)
@@ -192,7 +190,7 @@ hero.on('message',async message => {
 	      await m.react(message.guild.emojis.find(r => r.name === 'redTick'));
 	      });
             falseM.on('collect', async (r) => {
-              m.delete().catch();
+              
               message.channel.send('- **تم الغاء الارسال**');
             });
           });
@@ -228,7 +226,7 @@ hero.on('message',async message => {
             let falseM = m.createReactionCollector(thisFalse, { time: 12000 });
 
             trueM.on('collect', async (r) => {
-              m.delete().catch();
+              
               message.channel.send('- **تم نشر الكود**');
               let c = message.guild.channels.get('495538933141340163');
               let m = await c.send(`@everyone, جميع الحقوق محفوظة لدى سيرفر كريشنز\n\`\`\`python\n${code}\`\`\`\n**» وصف الكود :**\n${desc.replace('**', '')}\n\n**» تم النشر بواسطة :** ${message.author}\n**» صاحب الكود :** ${creator}`)
@@ -236,7 +234,7 @@ hero.on('message',async message => {
 	      await m.react(message.guild.emojis.find(r => r.name === 'redTick'));
 	      });
             falseM.on('collect', async (r) => {
-              m.delete().catch();
+              
               message.channel.send('- **تم الغاء الارسال**');
             });
           });
@@ -272,7 +270,7 @@ hero.on('message',async message => {
             let falseM = m.createReactionCollector(thisFalse, { time: 12000 });
 
             trueM.on('collect', async (r) => {
-              m.delete().catch();
+              
               message.channel.send('- **تم نشر الكود**');
               let c = message.guild.channels.get('495538963252117524');
               let m = await c.send(`@everyone, جميع الحقوق محفوظة لدى سيرفر كريشنز\n\`\`\`js\n${code}\`\`\`\n**» وصف الكود :**\n${desc.replace('**', '')}\n\n**» تم النشر بواسطة :** ${message.author}\n**» صاحب الكود :** ${creator}`)
@@ -280,7 +278,7 @@ hero.on('message',async message => {
 	      await m.react(message.guild.emojis.find(r => r.name === 'redTick'));
 	      });
             falseM.on('collect', async (r) => {
-              m.delete().catch();
+              
               message.channel.send('- **تم الغاء الارسال**');
             });
           });
