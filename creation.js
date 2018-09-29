@@ -142,7 +142,7 @@ hero.on('message',async message => {
               
               message.channel.send('- **تم نشر الكود**');
               let c = message.guild.channels.get('495538135954882585');
-              let m = await c.send(`@everyone, جميع الحقوق محفوظة لدى سيرفر كريشنز\n\`\`\`js\n${code}\`\`\`\n**» وصف الكود :**\n${desc.replace('**', '')}\n\n**» تم النشر بواسطة :** ${message.author}\n**» صاحب الكود :** ${creator}`)
+              let m = await c.send(`@everyone, جميع الحقوق محفوظة لدى سيرفر كريشنز\n\`\`\`js\n${code}\`\`\`\n**${message.guild.emojis.find(r => r.name === 'terminal')} » وصف الكود :**\n${desc.replace('**', '')}\n\n**${message.guild.emojis.find(r => r.name === 'coding')} » تم النشر بواسطة :** ${message.author}\n**${message.guild.emojis.find(r => r.name === 'creator')} » صاحب الكود :** ${creator}`)
               await m.react(message.guild.emojis.find(r => r.name === 'greenTick'));
 	      await m.react(message.guild.emojis.find(r => r.name === 'redTick'));
 	      });
@@ -186,7 +186,7 @@ hero.on('message',async message => {
               
               message.channel.send('- **تم نشر الكود**');
               let c = message.guild.channels.get('495538189843300354');
-              let m = await c.send(`@everyone, جميع الحقوق محفوظة لدى سيرفر كريشنز\n\`\`\`html\n${code}\`\`\`\n**» وصف الكود :**\n${desc.replace('**', '')}\n\n**» تم النشر بواسطة :** ${message.author}\n**» صاحب الكود :** ${creator}`)
+              let m = await c.send(`@everyone, جميع الحقوق محفوظة لدى سيرفر كريشنز\n\`\`\`html\n${code}\`\`\`\n**${message.guild.emojis.find(r => r.name === 'terminal')} » وصف الكود :**\n${desc.replace('**', '')}\n\n**${message.guild.emojis.find(r => r.name === 'coding')} » تم النشر بواسطة :** ${message.author}\n**${message.guild.emojis.find(r => r.name === 'creator')} » صاحب الكود :** ${creator}`)
               await m.react(message.guild.emojis.find(r => r.name === 'greenTick'));
 	      await m.react(message.guild.emojis.find(r => r.name === 'redTick'));
 	      });
@@ -230,7 +230,7 @@ hero.on('message',async message => {
               
               message.channel.send('- **تم نشر الكود**');
               let c = message.guild.channels.get('495538933141340163');
-              let m = await c.send(`@everyone, جميع الحقوق محفوظة لدى سيرفر كريشنز\n\`\`\`python\n${code}\`\`\`\n**» وصف الكود :**\n${desc.replace('**', '')}\n\n**» تم النشر بواسطة :** ${message.author}\n**» صاحب الكود :** ${creator}`)
+              let m = await c.send(`@everyone, جميع الحقوق محفوظة لدى سيرفر كريشنز\n\`\`\`python\n${code}\`\`\`\n${message.guild.emojis.find(r => r.name === 'terminal')} **» وصف الكود :**\n${desc.replace('**', '')}\n\n**${message.guild.emojis.find(r => r.name === 'coding')} » تم النشر بواسطة :** ${message.author}\n**${message.guild.emojis.find(r => r.name === 'creator')} » صاحب الكود :** ${creator}`)
               await m.react(message.guild.emojis.find(r => r.name === 'greenTick'));
 	      await m.react(message.guild.emojis.find(r => r.name === 'redTick'));
 	      });
@@ -274,7 +274,7 @@ hero.on('message',async message => {
 
               message.channel.send('- **تم نشر الكود**');
               let c = message.guild.channels.get('495538963252117524');
-              let m = await c.send(`@everyone, جميع الحقوق محفوظة لدى سيرفر كريشنز\n\`\`\`js\n${code}\`\`\`\n**» وصف الكود :**\n${desc.replace('**', '')}\n\n**» تم النشر بواسطة :** ${message.author}\n**» صاحب الكود :** ${creator}`)
+              let m = await c.send(`@everyone, جميع الحقوق محفوظة لدى سيرفر كريشنز\n\`\`\`js\n${code}\`\`\`\n${message.guild.emojis.find(r => r.name === 'terminal')}** » وصف الكود :**\n${desc.replace('**', '')}\n\n**${message.guild.emojis.find(r => r.name === 'coding')} » تم النشر بواسطة :** ${message.author}\n**${message.guild.emojis.find(r => r.name === 'creator')} » صاحب الكود :** ${creator}`)
               await m.react(message.guild.emojis.find(r => r.name === 'greenTick'));
 	      await m.react(message.guild.emojis.find(r => r.name === 'redTick'));
 	      });
