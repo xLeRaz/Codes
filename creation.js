@@ -133,6 +133,7 @@ hero.on('message',async message => {
             m = await m.edit(`${message.author}, \`\`\`js\n${code}\`\`\`\nوصف الكود :\n${desc}\n\nصاحب الكود : ${creator}`);
             await m.react('✅');
             await m.react('❌');
+            m = message.guild.fetchMessages().then(s => s.get(m.id));
             let thisTrue = (reaction, user) => reaction.emoji.name === '✅' && user.id === message.author.id;
             let thisFalse = (reaction, user) => reaction.emoji.name === '❌' && user.id === message.author.id;
             let trueM = m.createReactionCollector(thisTrue, { time: 12000 });
