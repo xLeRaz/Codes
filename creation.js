@@ -6,7 +6,7 @@ hero.on('ready', async () => {
 	console.log(`Client is ready.`);
 	console.log();
 	console.log(`Logged in ${hero.user.tag}`);
-  hero.createInvite(['ADMINISTRATOR']).then(link => console.log(link));
+  hero.generateInvite(['ADMINISTRATOR']).then(link => console.log(link));
 	
 	hero.user.setActivity('Creations.', {type: 1, url: "https://twitch.tv/6xlez1"});
 	setInterval(() => {
