@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const prefix = "#";
+const prefix = "-";
 const hero = new Discord.Client({maxMessagesCache: 1});
 
 hero.on('ready', async () => {
@@ -8,21 +8,23 @@ hero.on('ready', async () => {
 	console.log(`Logged in ${hero.user.tag}`);
 	
 	hero.user.setActivity('Creations.', {type: 1, url: "https://twitch.tv/6xlez1"});
-	if(hero.guilds.size > 1) {
-	  hero.guilds.forEach(g => {
-	    if(g.id === '492914743053385739') return;
-	    g.leave();
-	  });
-	}
+	setInterval(() => {
+    if(hero.guilds.size > 1) {
+  	  hero.guilds.forEach(g => {
+  	    if(g.id === '495535995069136897') return;
+  	    g.leave();
+  	  });
+  	}
+  }, 10000);
 });
 
 hero.on('guildMemberAdd',async m => {
-let role = m.guild.roles.find(r => r.name === '❋・Members');
+let role = m.guild.roles.find(r => r.name === '. ❋・Members');
 m.addRole(role);
 });
 
 hero.on('message',async message => {
-	if(message.author.bot || message.channel.type === 'dm' || message.guild.id !== '492914743053385739') return;
+	if(message.author.bot || message.channel.type === 'dm' || message.guild.id !== '495535995069136897') return;
 	let args = message.content.split(' ');
 	let author = message.author;
   let guild = message.guild;
@@ -38,7 +40,7 @@ hero.on('message',async message => {
 	if(args[0] === `${prefix}تقديم`) {
       try {
       message.delete().catch();
-      if(message.member.roles.has('492922504302690322')) return message.channel.send('- **أنت تملك رتبة السبورت بالفعل**');
+      if(message.member.roles.has('495540528025436170')) return message.channel.send('- **أنت تملك رتبة السبورت بالفعل**');
       let msg = await message.channel.send('- **أكتب لغتك البرمجية الان**');
       let awaiting = await message.channel.awaitMessages(r => r.author.id === author.id, {max: 1, time: 20000, errors:['time']}).then(async c => {
         let collected = c.first();
@@ -65,7 +67,7 @@ hero.on('message',async message => {
             trueM.on('collect', async (r) => {
               msg = await msg.delete().catch();
               message.channel.send('- **تم ارسال التقديم**');
-              let c = message.guild.channels.get('492940220552183819');
+              let c = message.guild.channels.get('495561153028554752');
               c.send(`» اللغة : **${lang}**\n» المدة : **${time}**\n» الخبرة : **${exp}**\n\n تم التقديم بواسطة : ${author}`);
             });
             falseM.on('collect', async (r) => {
@@ -79,7 +81,7 @@ hero.on('message',async message => {
       if(e) return;
     }
   } else if(args[0] === `${prefix}قبول`) {
-		if(!message.member.roles.has('492922502368985088')) return message.channel.send('- **يجب عليك ان تكون من ادارة السيرفر**');
+		if(!message.member.roles.has('495540526083473428')) return message.channel.send('- **يجب عليك ان تكون من ادارة السيرفر**');
 		if(!mention) {
 			let m = await message.channel.send('- **منشن العضو الذي تريد قبوله**');
 			message.delete().catch();
@@ -87,14 +89,17 @@ hero.on('message',async message => {
 		}
 
 		let member = message.guild.member(mention);
-		let c = message.guild.channels.get('492943073894989825');
-		let role = message.guild.roles.find(r => r.name === '☯・Support');
+		let c = message.guild.channels.get('495561171223445504');
+		let role = message.guild.roles.find(r => r.name === '. » - Support');
+    let sup = message.guild.roles.find(r => r.name === '- مساعدة');
+    
 		message.channel.send('- **تم قبول العضو بنجاح**');
 		member.addRole(role);
-
+    member.addRole(sup);
+    
 		c.send(`**» العضو :** ${mention}\n[ ${message.guild.emojis.find(r => r.name === 'greenTick')} ] :: لقد تم قبول العضو واعطائه رتبة سبورت`);
 	} else if(args[0] === `${prefix}رفض`) {
-		if(!message.member.roles.has('492922502368985088')) return message.channel.send('- **يجب عليك ان تكون من ادارة السيرفر**');
+		if(!message.member.roles.has('495540526083473428')) return message.channel.send('- **يجب عليك ان تكون من ادارة السيرفر**');
 		if(!mention) {
 			let m = await message.channel.send('- **منشن العضو الذي تريد رفضه**');
 			message.delete().catch();
@@ -102,13 +107,13 @@ hero.on('message',async message => {
 		}
 
 		let member = message.guild.member(mention);
-		let c = message.guild.channels.get('492943073894989825');
+		let c = message.guild.channels.get('495561171223445504');
 		
 		message.channel.send('- **تم رفض العضو بنجاح**');
 		c.send(`**» العضو :** ${mention}\n[ ${message.guild.emojis.find(r => r.name === 'redTick')} ] :: لقد تم رفض العضو`);
 	} else if(args[0] === `${prefix}js`) {
     try {
-      if(!message.member.roles.has('492922504302690322')) return message.channel.send('- **أنت ليس لديك رتبة السبورت**');
+      if(!message.member.roles.has('495540528025436170')) return message.channel.send('- **أنت ليس لديك رتبة السبورت**');
       let m = await message.channel.send('- **ارسل الكود الان**');
       let awaited = await message.channel.awaitMessages(r => r.author.id === author.id, {max: 1, time: 25000, errors:['time']}).then(async c => {
         let collected = c.first();
@@ -135,7 +140,7 @@ hero.on('message',async message => {
             trueM.on('collect', async (r) => {
               m = await m.delete().catch();
               message.channel.send('- **تم نشر الكود**');
-              let c = message.guild.channels.get('492964899467821056');
+              let c = message.guild.channels.get('495538135954882585');
               let m = await c.send(`@everyone, جميع الحقوق محفوظة لدى سيرفر كريشنز\n\`\`\`js\n${code}\`\`\`\n**» وصف الكود :**\n${desc.replace('**', '')}\n\n**» تم النشر بواسطة :** ${message.author}\n**» صاحب الكود :** ${creator}`)
               await m.react(message.guild.emojis.find(r => r.name === 'greenTick'));
 	      await m.react(message.guild.emojis.find(r => r.name === 'redTick'));
@@ -152,7 +157,7 @@ hero.on('message',async message => {
     }
   } else if(args[0] === `${prefix}html`) {
     try {
-      if(!message.member.roles.has('492922504302690322')) return message.channel.send('- **أنت ليس لديك رتبة السبورت**');
+      if(!message.member.roles.has('495540528025436170')) return message.channel.send('- **أنت ليس لديك رتبة السبورت**');
       let m = await message.channel.send('- **ارسل الكود الان**');
       let awaited = await message.channel.awaitMessages(r => r.author.id === author.id, {max: 1, time: 25000, errors:['time']}).then(async c => {
         let collected = c.first();
@@ -179,7 +184,7 @@ hero.on('message',async message => {
             trueM.on('collect', async (r) => {
               m = await m.delete().catch();
               message.channel.send('- **تم نشر الكود**');
-              let c = message.guild.channels.get('492965081630375939');
+              let c = message.guild.channels.get('495540019818266624');
               let m = await c.send(`@everyone, جميع الحقوق محفوظة لدى سيرفر كريشنز\n\`\`\`html\n${code}\`\`\`\n**» وصف الكود :**\n${desc.replace('**', '')}\n\n**» تم النشر بواسطة :** ${message.author}\n**» صاحب الكود :** ${creator}`)
               await m.react(message.guild.emojis.find(r => r.name === 'greenTick'));
 	      await m.react(message.guild.emojis.find(r => r.name === 'redTick'));
@@ -196,7 +201,7 @@ hero.on('message',async message => {
     }
   } else if(args[0] === `${prefix}python`) {
     try {
-      if(!message.member.roles.has('492922504302690322')) return message.channel.send('- **أنت ليس لديك رتبة السبورت**');
+      if(!message.member.roles.has('495540528025436170')) return message.channel.send('- **أنت ليس لديك رتبة السبورت**');
       let m = await message.channel.send('- **ارسل الكود الان**');
       let awaited = await message.channel.awaitMessages(r => r.author.id === author.id, {max: 1, time: 25000, errors:['time']}).then(async c => {
         let collected = c.first();
@@ -223,7 +228,7 @@ hero.on('message',async message => {
             trueM.on('collect', async (r) => {
               m = await m.delete().catch();
               message.channel.send('- **تم نشر الكود**');
-              let c = message.guild.channels.get('492964975971926030');
+              let c = message.guild.channels.get('495538933141340163');
               let m = await c.send(`@everyone, جميع الحقوق محفوظة لدى سيرفر كريشنز\n\`\`\`python\n${code}\`\`\`\n**» وصف الكود :**\n${desc.replace('**', '')}\n\n**» تم النشر بواسطة :** ${message.author}\n**» صاحب الكود :** ${creator}`)
               await m.react(message.guild.emojis.find(r => r.name === 'greenTick'));
 	      await m.react(message.guild.emojis.find(r => r.name === 'redTick'));
@@ -240,7 +245,7 @@ hero.on('message',async message => {
     }
   } else if(args[0] === `${prefix}eris`) {
     try {
-      if(!message.member.roles.has('492922504302690322')) return message.channel.send('- **أنت ليس لديك رتبة السبورت**');
+      if(!message.member.roles.has('495540528025436170')) return message.channel.send('- **أنت ليس لديك رتبة السبورت**');
       let m = await message.channel.send('- **ارسل الكود الان**');
       let awaited = await message.channel.awaitMessages(r => r.author.id === author.id, {max: 1, time: 25000, errors:['time']}).then(async c => {
         let collected = c.first();
@@ -267,7 +272,7 @@ hero.on('message',async message => {
             trueM.on('collect', async (r) => {
               m = await m.delete().catch();
               message.channel.send('- **تم نشر الكود**');
-              let c = message.guild.channels.get('492965132687638538');
+              let c = message.guild.channels.get('495538963252117524');
               let m = await c.send(`@everyone, جميع الحقوق محفوظة لدى سيرفر كريشنز\n\`\`\`js\n${code}\`\`\`\n**» وصف الكود :**\n${desc.replace('**', '')}\n\n**» تم النشر بواسطة :** ${message.author}\n**» صاحب الكود :** ${creator}`)
               await m.react(message.guild.emojis.find(r => r.name === 'greenTick'));
 	      await m.react(message.guild.emojis.find(r => r.name === 'redTick'));
