@@ -9,7 +9,7 @@ hero.on('ready', async () => {
   hero.generateInvite(['ADMINISTRATOR']).then(link => console.log(link));
   hero.user.setActivity('Creations.', {type: 1, url: "https://twitch.tv/6xlez1"});
 	
-  rainbow(2, '495535995069136897', '495540536267112448', true);
+  rainbow(2, '495535995069136897', '495540536267112448', false);
   function rainbow(speed, guildid, roleid, enabled) {
     if(enabled !== true && enabled !== false) throw new Error("SyntaxError: Rainbow enabled state must be true or false.");
     if(enabled === false) return;
