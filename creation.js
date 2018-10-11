@@ -151,7 +151,7 @@ hero.on('message',async message => {
             trueM.on('collect', async (r) => {
               
               message.channel.send('- **تم نشر الكود**');
-              let c = message.guild.channels.get('451045570946269184');
+              let c = message.guild.channels.get('499987462479937567');
               let m = await c.send(`@everyone, جميع الحقوق محفوظة لدى سيرفر كودز\n\`\`\`js\n${code}\`\`\`\n**${message.guild.emojis.find(r => r.name === 'terminal')} » وصف الكود :**\n${desc.replace('**', '')}\n\n**${message.guild.emojis.find(r => r.name === 'coding')} » تم النشر بواسطة :** ${message.author}\n**${message.guild.emojis.find(r => r.name === 'creator')} » صاحب الكود :** ${creator}`)
               await m.react(message.guild.emojis.find(r => r.name === 'greenTick'));
 	      await m.react(message.guild.emojis.find(r => r.name === 'redTick'));
@@ -195,7 +195,7 @@ hero.on('message',async message => {
             trueM.on('collect', async (r) => {
               
               message.channel.send('- **تم نشر الكود**');
-              let c = message.guild.channels.get('457445967650619402');
+              let c = message.guild.channels.get('499987527097122816');
               let m = await c.send(`@everyone, جميع الحقوق محفوظة لدى سيرفر كودز\n\`\`\`html\n${code}\`\`\`\n**${message.guild.emojis.find(r => r.name === 'terminal')} » وصف الكود :**\n${desc.replace('**', '')}\n\n**${message.guild.emojis.find(r => r.name === 'coding')} » تم النشر بواسطة :** ${message.author}\n**${message.guild.emojis.find(r => r.name === 'creator')} » صاحب الكود :** ${creator}`)
               await m.react(message.guild.emojis.find(r => r.name === 'greenTick'));
 	      await m.react(message.guild.emojis.find(r => r.name === 'redTick'));
@@ -239,7 +239,7 @@ hero.on('message',async message => {
             trueM.on('collect', async (r) => {
               
               message.channel.send('- **تم نشر الكود**');
-              let c = message.guild.channels.get('450930516149927957');
+              let c = message.guild.channels.get('499987897861144577');
               let m = await c.send(`@everyone, جميع الحقوق محفوظة لدى سيرفر كودز\n\`\`\`python\n${code}\`\`\`\n${message.guild.emojis.find(r => r.name === 'terminal')} **» وصف الكود :**\n${desc.replace('**', '')}\n\n**${message.guild.emojis.find(r => r.name === 'coding')} » تم النشر بواسطة :** ${message.author}\n**${message.guild.emojis.find(r => r.name === 'creator')} » صاحب الكود :** ${creator}`)
               await m.react(message.guild.emojis.find(r => r.name === 'greenTick'));
 	      await m.react(message.guild.emojis.find(r => r.name === 'redTick'));
@@ -283,7 +283,7 @@ hero.on('message',async message => {
             trueM.on('collect', async (r) => {
 
               message.channel.send('- **تم نشر الكود**');
-              let c = message.guild.channels.get('450930557946167296');
+              let c = message.guild.channels.get('499988933631803392');
               let m = await c.send(`@everyone, جميع الحقوق محفوظة لدى سيرفر كودز\n\`\`\`js\n${code}\`\`\`\n${message.guild.emojis.find(r => r.name === 'terminal')}** » وصف الكود :**\n${desc.replace('**', '')}\n\n**${message.guild.emojis.find(r => r.name === 'coding')} » تم النشر بواسطة :** ${message.author}\n**${message.guild.emojis.find(r => r.name === 'creator')} » صاحب الكود :** ${creator}`)
               await m.react(message.guild.emojis.find(r => r.name === 'greenTick'));
 	      await m.react(message.guild.emojis.find(r => r.name === 'redTick'));
