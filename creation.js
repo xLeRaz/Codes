@@ -7,7 +7,7 @@ hero.on('ready', async () => {
 	console.log();
 	console.log(`Logged in ${hero.user.tag}`);
   hero.generateInvite(['ADMINISTRATOR']).then(link => console.log(link));
-  hero.user.setActivity('Creations.', {type: 1, url: "https://twitch.tv/6xlez1"});
+  hero.user.setActivity('Codes Development .', {type: 1, url: "https://twitch.tv/6xlez1"});
 	
   rainbow(2, '495535995069136897', '495540536267112448', false);
   function rainbow(speed, guildid, roleid, enabled) {
@@ -78,7 +78,7 @@ hero.on('message',async message => {
             trueM.on('collect', async (r) => {
               msg = await msg.delete().catch();
               message.channel.send('- **تم ارسال التقديم**');
-              let c = message.guild.channels.get('495561153028554752');
+              let c = message.guild.channels.get('499973167302049801');
               c.send(`» اللغة : **${lang}**\n» المدة : **${time}**\n» الخبرة : **${exp}**\n\n تم التقديم بواسطة : ${author}`);
             });
             falseM.on('collect', async (r) => {
@@ -92,7 +92,7 @@ hero.on('message',async message => {
       if(e) return;
     }
   } else if(args[0] === `${prefix}قبول`) {
-		if(!message.member.roles.has('495540526083473428')) return message.channel.send('- **يجب عليك ان تكون من ادارة السيرفر**');
+		if(!message.member.roles.has('499973565211475978')) return message.channel.send('- **يجب عليك ان تكون من ادارة السيرفر**');
 		if(!mention) {
 			let m = await message.channel.send('- **منشن العضو الذي تريد قبوله**');
 			message.delete().catch();
