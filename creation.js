@@ -27,7 +27,7 @@ hero.on('ready', async () => {
 
     if(hero.guilds.size > 1) {
   	  hero.guilds.forEach(g => {
-  	    if(g.id === '495535995069136897') return;
+  	    if(g.id === '450925741010583572') return;
   	    g.leave();
   	  });
   	}
