@@ -315,7 +315,7 @@ hero.on('message',async message => {
    }
  
    c.fetchMessage(args[2]).then(msg => {
-     if(!msg.includes(`تم النشر بواسطة : ${message.author}`) || !msg.isMentioned(message.author)) return message.channel.send(`- **هذا الكود لم تقم بنشره**`);
+     if(!msg.isMentioned(message.author)) return message.channel.send(`- **هذا الكود لم تقم بنشره**`);
      msg.delete().then(() => {
        message.channel.send('- **تم مسح الكود بنجاح**');
      }).catch(e => {
