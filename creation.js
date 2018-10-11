@@ -330,6 +330,8 @@ hero.on('message',async message => {
       });
     });
   });
+} else if(args[0] === `${prefix}members`) {
+  return message.channel.send(`\`Members\`: ${message.guild.memberCount}`);
 }
 });
 
