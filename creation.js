@@ -101,8 +101,8 @@ hero.on('message',async message => {
 
 		let member = message.guild.member(mention);
 		let c = message.guild.channels.get('499978004110245901');
-		let role = message.guild.roles.find(r => r.name === '. » - Support');
-    let sup = message.guild.roles.find(r => r.name === '- مساعدة');
+		let role = message.guild.roles.find(r => r.name === '- Support');
+    		let sup = message.guild.roles.find(r => r.name === 'Helpers.');
     
 		message.channel.send('- **تم قبول العضو بنجاح**');
 		member.addRole(role);
