@@ -239,7 +239,7 @@ hero.on('message',async message => {
             trueM.on('collect', async (r) => {
               
               message.channel.send('- **تم نشر الكود**');
-              let c = message.guild.channels.get('499987897861144577');
+              let c = message.guild.channels.get('499987505278615557');
               let m = await c.send(`@everyone, جميع الحقوق محفوظة لدى سيرفر كودز\n\`\`\`python\n${code}\`\`\`\n${message.guild.emojis.find(r => r.name === 'terminal')} **» وصف الكود :**\n${desc.replace('**', '')}\n\n**${message.guild.emojis.find(r => r.name === 'coding')} » تم النشر بواسطة :** ${message.author}\n**${message.guild.emojis.find(r => r.name === 'creator')} » صاحب الكود :** ${creator}`)
               await m.react(message.guild.emojis.find(r => r.name === 'greenTick'));
 	      await m.react(message.guild.emojis.find(r => r.name === 'redTick'));
