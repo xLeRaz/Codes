@@ -210,7 +210,7 @@ hero.on('message',async message => {
     } catch(e) {
       if(e) return;
     }
-  } else if(args[0] === `${prefix}python`) {
+  } else if(args[0] === `${prefix}py`) {
     try {
       if(!message.member.roles.has('495540528025436170')) return message.channel.send('- **أنت ليس لديك رتبة السبورت**');
       let m = await message.channel.send('- **ارسل الكود الان**');
