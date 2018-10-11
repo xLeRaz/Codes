@@ -35,7 +35,7 @@ hero.on('ready', async () => {
 });
 
 hero.on('message',async message => {
-	if(message.author.bot || message.channel.type === 'dm' || message.guild.id !== '495535995069136897') return;
+	if(message.author.bot || message.channel.type === 'dm' || message.guild.id !== '450925741010583572') return;
 	let args = message.content.split(' ');
 	let author = message.author;
   let guild = message.guild;
