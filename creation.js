@@ -298,7 +298,33 @@ hero.on('message',async message => {
     } catch(e) {
       if(e) return;
     }
-  } else if(args[0] === `${prefix}clear`) {
+  } else if(args[0] === `${prefix}remove`) {
+   if(!message.member.roles.has('477972887391698964')) return message.channel.send('- **أنت ليس لديك رتبة السبورت**');
+   if(!args[1]) return message.channel.send(`- **\`[ JS, PY, HTML, ERIS ]\` يجب ان تضع اللغة بعد الأمر**`);
+   if(!args[1].toLowerCase() === 'js' && !args[1].toLowerCase() === 'eris' && !args[1].toLowerCase() === 'html' && !args[1].toLowerCase() === 'py') return message.channel.send('- **هذه اللغة غير موجودة بالسستم**');
+   if(!args[2] || isNaN(args[2]) || (Array.from(args[2])).length > 18) return message.channel.send(`- **يجب عليك كتابة اي دي الروم بعد الأمر**`);
+   let c;
+   if(args[1].toLowerCase() === 'js') {
+     c = hero.channels.get('499987462479937567');
+   } else if(args[1].toLowerCase() === 'py') {
+     c = hero.channels.get('499987505278615557');
+   } else if(args[1].toLowerCase() === 'eris') {
+     c = hero.channels.get('499988933631803392');
+   } else if(args[1].toLowerCase() === 'html') {
+     c = hero.channels.get('499987527097122816')
+   }
+ 
+   c.fetchMessage(args[2]).then(msg => {
+     if(!msg.includes(`تم النشر بواسطة : ${message.author}`) || !msg.isMentioned(message.author)) return message.channel.send(`- **هذا الكود لم تقم بنشره**`);
+     msg.delete().then(() => {
+       message.channel.send('- **تم مسح الكود بنجاح**');
+     }).catch(e => {
+       if(e) return message.channel.send(`:white_small_square: **Error :: \`${e.message}\`**`);
+     });
+   }).catch(e => {
+     if(e) return message.channel.send(`:white_small_square: **Error :: \`${e.message}\`**`);
+   });
+ } else if(args[0] === `${prefix}clear`) {
     if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send('- **أنت لا تملك الصلاحيات اللازمة**');
     message.delete().then(() => {
       let size = 0;
