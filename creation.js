@@ -126,17 +126,17 @@ hero.on('message',async message => {
     try {
       if(!message.member.roles.has('477972887391698964')) return message.channel.send('- **أنت ليس لديك رتبة السبورت**');
       let m = await message.channel.send('- **ارسل الكود الان**');
-      let awaited = await message.channel.awaitMessages(r => r.author.id === author.id, {max: 1, time: 25000, errors:['time']}).then(async c => {
+      let awaited = await message.channel.awaitMessages(r => r.author.id === author.id, {max: 1, time: 60000, errors:['time']}).then(async c => {
         let collected = c.first();
         collected.delete().catch();
         code = collected.content;
         m = await m.edit('- **ارسل وصف الكود الان**');
-        awaited = await message.channel.awaitMessages(r => r.author.id === author.id, {max: 1, time: 25000, errors:['time']}).then(async c => {
+        awaited = await message.channel.awaitMessages(r => r.author.id === author.id, {max: 1, time: 60000, errors:['time']}).then(async c => {
           let collected = c.first();
           collected.delete().catch();
           desc = collected.content;
           m.edit('- **ارسل اسم السيرفر او الشخص صانع الكود**');
-          awaited = await message.channel.awaitMessages(r => r.author.id === author.id, {max: 1, time: 25000, errors:['time']}).then(async c => {
+          awaited = await message.channel.awaitMessages(r => r.author.id === author.id, {max: 1, time: 60000, errors:['time']}).then(async c => {
             let collected = c.first();
             collected.delete().catch();
             creator = collected.content;
@@ -170,17 +170,17 @@ hero.on('message',async message => {
     try {
       if(!message.member.roles.has('477972887391698964')) return message.channel.send('- **أنت ليس لديك رتبة السبورت**');
       let m = await message.channel.send('- **ارسل الكود الان**');
-      let awaited = await message.channel.awaitMessages(r => r.author.id === author.id, {max: 1, time: 25000, errors:['time']}).then(async c => {
+      let awaited = await message.channel.awaitMessages(r => r.author.id === author.id, {max: 1, time: 60000, errors:['time']}).then(async c => {
         let collected = c.first();
         collected.delete().catch();
         code = collected.content;
         m = await m.edit('- **ارسل وصف الكود الان**');
-        awaited = await message.channel.awaitMessages(r => r.author.id === author.id, {max: 1, time: 25000, errors:['time']}).then(async c => {
+        awaited = await message.channel.awaitMessages(r => r.author.id === author.id, {max: 1, time: 60000, errors:['time']}).then(async c => {
           let collected = c.first();
           collected.delete().catch();
           desc = collected.content;
           m.edit('- **ارسل اسم السيرفر او الشخص صانع الكود**');
-          awaited = await message.channel.awaitMessages(r => r.author.id === author.id, {max: 1, time: 25000, errors:['time']}).then(async c => {
+          awaited = await message.channel.awaitMessages(r => r.author.id === author.id, {max: 1, time: 60000, errors:['time']}).then(async c => {
             let collected = c.first();
             collected.delete().catch();
             creator = collected.content;
@@ -214,17 +214,17 @@ hero.on('message',async message => {
     try {
       if(!message.member.roles.has('477972887391698964')) return message.channel.send('- **أنت ليس لديك رتبة السبورت**');
       let m = await message.channel.send('- **ارسل الكود الان**');
-      let awaited = await message.channel.awaitMessages(r => r.author.id === author.id, {max: 1, time: 25000, errors:['time']}).then(async c => {
+      let awaited = await message.channel.awaitMessages(r => r.author.id === author.id, {max: 1, time: 60000, errors:['time']}).then(async c => {
         let collected = c.first();
         collected.delete().catch();
         code = collected.content;
         m = await m.edit('- **ارسل وصف الكود الان**');
-        awaited = await message.channel.awaitMessages(r => r.author.id === author.id, {max: 1, time: 25000, errors:['time']}).then(async c => {
+        awaited = await message.channel.awaitMessages(r => r.author.id === author.id, {max: 1, time: 60000, errors:['time']}).then(async c => {
           let collected = c.first();
           collected.delete().catch();
           desc = collected.content;
           m.edit('- **ارسل اسم السيرفر او الشخص صانع الكود**');
-          awaited = await message.channel.awaitMessages(r => r.author.id === author.id, {max: 1, time: 25000, errors:['time']}).then(async c => {
+          awaited = await message.channel.awaitMessages(r => r.author.id === author.id, {max: 1, time: 60000, errors:['time']}).then(async c => {
             let collected = c.first();
             collected.delete().catch();
             creator = collected.content;
@@ -258,17 +258,17 @@ hero.on('message',async message => {
     try {
       if(!message.member.roles.has('477972887391698964')) return message.channel.send('- **أنت ليس لديك رتبة السبورت**');
       let m = await message.channel.send('- **ارسل الكود الان**');
-      let awaited = await message.channel.awaitMessages(r => r.author.id === author.id, {max: 1, time: 25000, errors:['time']}).then(async c => {
+      let awaited = await message.channel.awaitMessages(r => r.author.id === author.id, {max: 1, time: 60000, errors:['time']}).then(async c => {
         let collected = c.first();
         collected.delete().catch();
         code = collected.content;
         m = await m.edit('- **ارسل وصف الكود الان**');
-        awaited = await message.channel.awaitMessages(r => r.author.id === author.id, {max: 1, time: 25000, errors:['time']}).then(async c => {
+        awaited = await message.channel.awaitMessages(r => r.author.id === author.id, {max: 1, time: 60000, errors:['time']}).then(async c => {
           let collected = c.first();
           collected.delete().catch();
           desc = collected.content;
           m.edit('- **ارسل اسم السيرفر او الشخص صانع الكود**');
-          awaited = await message.channel.awaitMessages(r => r.author.id === author.id, {max: 1, time: 25000, errors:['time']}).then(async c => {
+          awaited = await message.channel.awaitMessages(r => r.author.id === author.id, {max: 1, time: 60000, errors:['time']}).then(async c => {
             let collected = c.first();
             collected.delete().catch();
             creator = collected.content;
@@ -343,16 +343,24 @@ hero.on('message',async message => {
   let msgCount = 0;
   let errorCount = 0;
   let successCount = 0;
-  message.channel.send(`**- [ :bookmark: :: ${msgCount} ] ・عدد الرسائل المرسلة**\n**- [ :inbox_tray: :: ${successCount} ] ・عدد الرسائل المستلمة**\n**- [ :outbox_tray: :: ${errorCount} ]・عدد الرسائل الغير مستلمة**`).then(msg => {
+	let status;
+	if(msgCount === message.guild.memberCount) {
+		status = 'تم الإرسال';
+	} else if(msgCount !== message.guild.memberCount) {
+		status = 'جارى الارسال';
+	}
+  message.channel.send(`**- [ :bookmark: :: ${msgCount} ] ・عدد الرسائل المرسلة**\n**- [ :inbox_tray: :: ${successCount} ] ・عدد الرسائل المستلمة**\n**- [ :outbox_tray: :: ${errorCount} ]・عدد الرسائل الغير مستلمة\n- [ :white_small_square: :: ${status} ]・حالة الرسائل المرسلة**`).then(msg => {
     message.guild.members.forEach(g => {
       g.send(args.slice(1).join(' ')).then(() => {
         successCount++;
         msgCount++;
-        msg.edit(`**- [ :bookmark: :: ${msgCount} ] ・عدد الرسائل المرسلة**\n**- [ :inbox_tray: :: ${successCount} ] ・عدد الرسائل المستلمة**\n**- [ :outbox_tray: :: ${errorCount} ]・عدد الرسائل الغير مستلمة**`);
+				if(!msg) return;
+        msg.edit(`**- [ :bookmark: :: ${msgCount} ] ・عدد الرسائل المرسلة**\n**- [ :inbox_tray: :: ${successCount} ] ・عدد الرسائل المستلمة**\n**- [ :outbox_tray: :: ${errorCount} ]・عدد الرسائل الغير مستلمة\n- [ :white_small_square: :: ${status} ]・حالة الرسائل المرسل**`);
       }).catch(e => {
         errorCount++;
         msgCount++;
-        msg.edit(`**- [ :bookmark: :: ${msgCount} ] ・عدد الرسائل المرسلة**\n**- [ :inbox_tray: :: ${successCount} ] ・عدد الرسائل المستلمة**\n**- [ :outbox_tray: :: ${errorCount} ]・عدد الرسائل الغير مستلمة**`);
+				if(!msg) return;
+        msg.edit(`**- [ :bookmark: :: ${msgCount} ] ・عدد الرسائل المرسلة**\n**- [ :inbox_tray: :: ${successCount} ] ・عدد الرسائل المستلمة**\n**- [ :outbox_tray: :: ${errorCount} ]・عدد الرسائل الغير مستلمة\n- [ :white_small_square: :: ${status} ]・حالة الرسائل المرسل**`);
       });
     });
   });
