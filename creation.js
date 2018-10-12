@@ -53,17 +53,17 @@ hero.on('message',async message => {
       message.delete().catch();
       if(message.member.roles.has('477972887391698964')) return message.channel.send('- **أنت تملك رتبة السبورت بالفعل**');
       let msg = await message.channel.send('- **أكتب لغتك البرمجية الان**');
-      let awaiting = await message.channel.awaitMessages(r => r.author.id === author.id, {max: 1, time: 20000, errors:['time']}).then(async c => {
+      let awaiting = await message.channel.awaitMessages(r => r.author.id === author.id, {max: 1, time: 60000, errors:['time']}).then(async c => {
         let collected = c.first();
         collected.delete().catch();
         lang = collected.content;
         msg = await msg.edit('- **أكتب مدة خبرتك البرمجية الان**');
-        awaiting = await message.channel.awaitMessages(r => r.author.id === author.id, {max: 1, time: 20000, errors:['time']}).then(async c => {
+        awaiting = await message.channel.awaitMessages(r => r.author.id === author.id, {max: 1, time: 60000, errors:['time']}).then(async c => {
           let collected = c.first();
           collected.delete().catch();
           time = collected.content;
           msg = await msg.edit('- **أكتب خبرتك البرمجية الان**');
-          awaiting = await message.channel.awaitMessages(r => r.author.id === author.id, {max: 1, time: 20000, errors:['time']}).then(async c => {
+          awaiting = await message.channel.awaitMessages(r => r.author.id === author.id, {max: 1, time: 60000, errors:['time']}).then(async c => {
             let collected = c.first();
             collected.delete().catch();
             exp = collected.content;
